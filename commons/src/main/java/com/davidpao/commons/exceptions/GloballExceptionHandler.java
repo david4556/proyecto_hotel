@@ -1,7 +1,7 @@
 package com.davidpao.commons.exceptions;
 
 
-import com.david.commons.dto.CustomErrorResponse;
+import com.davidpao.commons.dto.CustomErrorResponse;
 import feign.FeignException;
 import feign.RetryableException;
 import jakarta.validation.ConstraintViolationException;
