@@ -1,4 +1,3 @@
-
 server:
   port: 8090
 
@@ -18,16 +17,16 @@ spring:
                 - StripPrefix=2
 
             - id: habitaciones
-              uri: lb://phabitaciones
+              uri: lb://habitaciones
               predicates:
                 - Path=/api/habitaciones/**
               filters:
                 - StripPrefix=2
 
-            - id: creservaciones
-              uri: lb://reservaciones
+            - id: citas
+              uri: lb://citas
               predicates:
-                - Path=/api/reservaciones/**
+                - Path=/api/citas/**
               filters:
                 - StripPrefix=2
     loadbalancer:
