@@ -2,7 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Annotation profile for commons" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -20,7 +19,6 @@
         <module name="habitaciones" />
         <module name="reservaciones" />
         <module name="gateway" />
-        <module name="eureka" />
       </profile>
     </annotationProcessing>
   </component>
