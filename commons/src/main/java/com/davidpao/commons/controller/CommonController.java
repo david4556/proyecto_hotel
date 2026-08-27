@@ -1,6 +1,6 @@
 package com.davidpao.commons.controller;
 
-import com.davidpao.commons.services.CrudService;
+import com.davidpao.commons.service.CrudService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
