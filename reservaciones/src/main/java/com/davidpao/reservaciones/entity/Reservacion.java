@@ -158,26 +158,11 @@ public class Reservacion {
     }
 
 
-    public void actualizarEstadoReserva(
-            EstadoReservacion nuevoEstado) {
-
+    public void actualizarEstadoReservacion(EstadoReservacion nuevoEstado) {
+        validarNoEliminada();
         if (nuevoEstado == null) {
-
-            throw new IllegalArgumentException(
-                    "el nuevo estado de la reservacion es requerido"
-            );
+            throw new IllegalArgumentException("El nuevo estado de la reservación no puede ser nulo.");
         }
-
-        if (!this.estadoReserva.puedeCambiarA(nuevoEstado)) {
-
-            throw new IllegalStateException(
-                    "la reservacion con estado "
-                            + this.estadoReserva
-                            + " solo puede cambiar a "
-                            + this.estadoReserva.puedeCambiar()
-            );
-        }
-
         this.estadoReserva = nuevoEstado;
     }
 

@@ -23,10 +23,10 @@ spring:
               filters:
                 - StripPrefix=2
 
-            - id: citas
-              uri: lb://citas
+            - id: reservaciones
+              uri: lb://reservaciones
               predicates:
-                - Path=/api/citas/**
+                - Path=/api/reservaciones/**
               filters:
                 - StripPrefix=2
     loadbalancer:

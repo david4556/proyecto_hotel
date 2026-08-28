@@ -7,10 +7,8 @@ import com.davidpao.commons.service.CrudService;
 public interface ReservacionService
         extends CrudService<ReservacionRequest, ReservacionResponse> {
 
-    void actualizarEstadoReservacion(Long idReservacion, Long idEstadoReservacion
-    );
+    void actualizarEstadoReservacion(Long idReservacion, Long idEstadoReservacion);
 
-    boolean tieneReservacionConfirmadaOEnCursoHabitacion(Long idHabitacion
-    );
+     boolean tieneReservasEnCurso(Long idHuesped);
 
 }

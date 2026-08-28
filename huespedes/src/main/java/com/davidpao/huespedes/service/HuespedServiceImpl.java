@@ -1,6 +1,6 @@
 package com.davidpao.huespedes.service;
 
-//import com.davidpao.commons.client.ReservaClient;
+import com.davidpao.commons.client.ReservacionClient;
 import com.davidpao.commons.dto.huespedes.HuespedRequest;
 import com.davidpao.commons.dto.huespedes.HuespedResponse;
 import com.davidpao.commons.enums.EstadoRegistro;
@@ -25,7 +25,7 @@ public class HuespedServiceImpl implements HuespedService {
 
     private final HuespedMapper huespedMapper;
 
-    //private final ReservaClient reservaClient;
+    private final ReservacionClient reservacionClient;
 
 
     @Override
@@ -120,13 +120,20 @@ public class HuespedServiceImpl implements HuespedService {
 
         Huesped huesped = obtenerHuespedActivoOException(id);
 
-        //validarReservasActivas(id, "eliminar");
+        log.info("Iniciando eliminación lógica de huésped con id: {}", id);
 
-        log.info("Eliminando huésped: {}", id);
+        log.info("Verificando si el huésped id: {} tiene reservaciones en estado EN_CURSO...", id);
+        Boolean tieneReservasEnCurso = reservacionClient.tieneReservasEnCurso(id);
+
+        if (Boolean.TRUE.equals(tieneReservasEnCurso)) {
+            throw new IllegalStateException("No se puede eliminar el huésped con id " + id + " porque tiene reservaciones en estado EN_CURSO.");
+        }
 
         huesped.eliminar();
 
-        log.info("Huésped eliminado correctamente: {}", id);
+        huespedRepository.save(huesped);
+
+        log.info("Huésped con id {} ha sido marcado como inactivo exitosamente.", id);
     }
 
 
@@ -234,16 +241,3 @@ public class HuespedServiceImpl implements HuespedService {
     }
 
 }
-    /*private void validarReservasActivas(Long idHuesped, String accion) {
-
-        /*if (reservaClient.tieneReservaEnCursoHuesped(idHuesped)) {
-
-            throw new IllegalStateException(
-                    String.format(
-                            "No se puede %s el huésped porque tiene una reserva EN_CURSO",
-                            accion
-                    )
-            );
-        }
-    }
-}*/

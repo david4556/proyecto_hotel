@@ -112,4 +112,18 @@ public class Habitacion {
             );
         }
     }
+
+    public void cambiarEstadoHabitacion(EstadoHabitacion nuevoEstado) {
+        if (nuevoEstado == null)
+            throw new IllegalArgumentException("El nuevo estado no puede ser nulo");
+
+        if (this.estadoHabitacion != null && this.estadoHabitacion.getCodigo().equals(nuevoEstado.getCodigo()))
+            return;
+
+        this.estadoHabitacion = nuevoEstado;
+    }
+
+    public EstadoHabitacion getEstado() {
+        return estadoHabitacion;
+    }
 }
