@@ -7,10 +7,7 @@ import com.davidpao.habitaciones.services.HabitacionService;
 import jakarta.validation.constraints.Positive;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Validated
@@ -35,6 +32,15 @@ public class HabitacionController
             @PathVariable @Positive (message = "El idHabitacion debe ser positivo") Long idHabitacion,
             @PathVariable @Positive (message = "El idEstado debe ser positivo") Long idEstadoHabitacion){
         service.actualizarEstadoHabitacion(idHabitacion,idEstadoHabitacion);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{idHabitacion}/disponibilidad-habitacion/{idDisponibilidad}")
+    public ResponseEntity<Void> actualizarDisponibilidadHabitacion(
+            @PathVariable("idHabitacion") Long idHabitacion,
+            @PathVariable("idDisponibilidad") Long idDisponibilidad) {
+
+        service.actualizarEstadoHabitacion(idHabitacion, idDisponibilidad);
         return ResponseEntity.noContent().build();
     }
 }

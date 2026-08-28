@@ -11,35 +11,28 @@ import java.util.Set;
 @RequiredArgsConstructor
 public enum EstadoReservacion {
 
-    PENDIENTE(1L , "Pendiente de confirmar",true, true) {
-        @Override
-        public Set<EstadoReservacion> puedeCambiar() {
-            return EnumSet.of(CONFIRMADA, CANCELADA);
-        }
-    },
-
-    CONFIRMADA(2L , "Confirmada por el paciente", true, false) {
+    CONFIRMADA(1L , "Reserva creada", true, false) {
         @Override
         public Set<EstadoReservacion> puedeCambiar() {
             return EnumSet.of( EN_CURSO ,  CANCELADA);
         }
     },
 
-    EN_CURSO(3L , "Pendiente llego a su cita ",true, false) {
+    EN_CURSO(2L , "Check-in realizado",true, false) {
         @Override
         public Set<EstadoReservacion> puedeCambiar() {
             return EnumSet.of(FINALIZADA);
         }
     },
 
-    FINALIZADA(4L , "Cita finalizada" ,false, true ) {
+    FINALIZADA(3L , "Check-out realizado" ,false, true ) {
         @Override
         public Set<EstadoReservacion> puedeCambiar() {
             return Set.of();
         }
     },
 
-    CANCELADA(5L , "Cita Cancelada", false, true) {
+    CANCELADA(4L , "Reserva cancelada", false, true) {
         @Override
         public Set<EstadoReservacion> puedeCambiar() {
             return Set.of();
@@ -56,14 +49,11 @@ public enum EstadoReservacion {
 
     public abstract Set<EstadoReservacion>puedeCambiar();
 
-
-
     public boolean puedeCambiarA(EstadoReservacion nuevoEstado){
         return puedeCambiar().contains(nuevoEstado);
     }
 
-
-    public static EstadoReservacion obtenerEstadoCitaPorCodigo(Long codigo){
+    public static EstadoReservacion obtenerEstadoReservaPorCodigo(Long codigo){
 
         for (EstadoReservacion e : values()){
             if (Objects.equals(e.codigo, codigo))
@@ -71,8 +61,7 @@ public enum EstadoReservacion {
                 return e;
             }
         }
-            throw new RecursoNoEncontradoException("codigo de cita no vlido" +codigo);
-
+            throw new RecursoNoEncontradoException("codigo de reservacion no valido " +codigo);
 
     }
 }

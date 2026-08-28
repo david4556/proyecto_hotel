@@ -1,7 +1,7 @@
 package com.davidpao.reservaciones.dto;
 
-import com.davidpao.commons.dto.habitacion.DatosHabitacion;
-import com.davidpao.commons.dto.huespedes.DatosHuesped;
+import com.davidpao.commons.dto.datos.DatosHabitacion;
+import com.davidpao.commons.dto.datos.DatosHuesped;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 

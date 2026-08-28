@@ -17,4 +17,6 @@ public interface HuespedClient {
     HuespedResponse obtenerHuespedPorIdSinEstado(
             @PathVariable("id") Long id
     );
+
+
 }
