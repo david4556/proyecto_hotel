@@ -1,8 +1,8 @@
 package com.davidpao.reservaciones.mapper;
 
-import com.davidpao.commons.dto.habitacion.DatosHabitacion;
+import com.davidpao.commons.dto.datos.DatosHabitacion;
 import com.davidpao.commons.dto.habitacion.HabitacionResponse;
-import com.davidpao.commons.dto.huespedes.DatosHuesped;
+import com.davidpao.commons.dto.datos.DatosHuesped;
 import com.davidpao.commons.dto.huespedes.HuespedResponse;
 import com.davidpao.commons.mapper.CommonMapper;
 import com.davidpao.reservaciones.dto.ReservacionRequest;
@@ -64,8 +64,11 @@ public class ReservacionMapper implements CommonMapper<ReservacionRequest, Reser
         if (huesped == null) return null;
 
         return new DatosHuesped(
-                huesped.id(),
-                huesped.nombre()
+                huesped.nombreCompleto(),
+                huesped.email(),
+                huesped.telefono(),
+                huesped.documento(),
+                huesped.nacionalidad()
         );
     }
 
@@ -75,9 +78,10 @@ public class ReservacionMapper implements CommonMapper<ReservacionRequest, Reser
         if (habitacion == null) return null;
 
         return new DatosHabitacion(
-                habitacion.id(),
                 habitacion.numeroHabitacion(),
-                habitacion.tipoHabitacion()
+                habitacion.tipo(),
+                habitacion.precio(),
+                habitacion.capacidad()
         );
     }
 }

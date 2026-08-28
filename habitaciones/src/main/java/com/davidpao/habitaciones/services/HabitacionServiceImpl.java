@@ -102,19 +102,14 @@ public class HabitacionServiceImpl implements HabitacionService{
 
 
     @Override
-    public void actualizarEstadoHabitacion(Long idHabitacion, Long idEstadoHabitacion) {
-        log.info("Solicitud para actualizar estado de la habitación con id: {} al estado id: {}", idHabitacion, idEstadoHabitacion);
+    @Transactional
+    public void actualizarEstadoHabitacion(Long idHabitacion, Long idDisponibilidad) {
+        Habitacion habitacion = habitacionRepository.findById(idHabitacion)
+                .orElseThrow(() -> new RecursoNoEncontradoException("Habitación no encontrada con ID: " + idHabitacion));
 
-        Habitacion habitacion = obtenerHabitacionActivaOException(idHabitacion);
+        EstadoHabitacion nuevoEstado = EstadoHabitacion.obtenerEstadoHabitacionPorCodigo(idDisponibilidad);
 
-        EstadoHabitacion nuevoEstado = EstadoHabitacion.obtenerEstadoHabitacionPorCodigo(idEstadoHabitacion);
-
-        validarTransicionDeEstado(habitacion.getEstadoHabitacion(), nuevoEstado);
-
-        log.info("Cambiando estado de {} a {}", habitacion.getEstadoHabitacion(), nuevoEstado);
-        habitacion.actualizarDisponibilidadHabitacion(nuevoEstado);
-
-        habitacionRepository.save(habitacion);
+        habitacion.cambiarEstadoHabitacion(nuevoEstado);
     }
 
     private Habitacion obtenerHabitacionActivoOException(Long id){
