@@ -85,13 +85,13 @@ public class Habitacion {
         this.estadoHabitacion= estadoHabitacion;
     }
 
-    public void actualizar (Integer numeroHabitacion, TipoHabitacion tipoHabitacion,
-                            BigDecimal precio, Integer capacidad,
-                            EstadoHabitacion estadoHabitacion, EstadoRegistro estadoRegistro){
+    public void actualizar(Integer numeroHabitacion, TipoHabitacion tipoHabitacion,
+                           BigDecimal precio, Integer capacidad,
+                           EstadoHabitacion nuevoEstadoHabitacion, EstadoRegistro estadoRegistro) {
 
         validarNoEliminado();
-
         validarDatos(tipoHabitacion);
+        validarCambioEstado(nuevoEstadoHabitacion);
 
         actualizarTipoHabitacion(tipoHabitacion);
 
@@ -99,8 +99,17 @@ public class Habitacion {
         this.tipoHabitacion = tipoHabitacion;
         this.precio = precio;
         this.capacidad = capacidad;
-        this.estadoHabitacion = estadoHabitacion;
+        this.estadoHabitacion = nuevoEstadoHabitacion;
         this.estadoRegistro = estadoRegistro;
+    }
 
+    private void validarCambioEstado(EstadoHabitacion nuevoEstado) {
+        if (nuevoEstado != null &&
+                this.estadoHabitacion == EstadoHabitacion.OCUPADA &&
+                nuevoEstado == EstadoHabitacion.DISPONIBLE) {
+            throw new IllegalStateException(
+                    "No se puede cambiar manualmente la habitación a DISPONIBLE mientras esté en estado OCUPADA."
+            );
+        }
     }
 }

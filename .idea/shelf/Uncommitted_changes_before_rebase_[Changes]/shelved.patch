@@ -1,0 +1,1975 @@
+Index: auth/.mvn/wrapper/maven-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/auth/.mvn/wrapper/maven-wrapper.properties b/auth/.mvn/wrapper/maven-wrapper.properties
+new file mode 100644
+--- /dev/null	(date 1787150119457)
++++ b/auth/.mvn/wrapper/maven-wrapper.properties	(date 1787150119457)
+@@ -0,0 +1,3 @@
++wrapperVersion=3.3.4
++distributionType=only-script
++distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.16/apache-maven-3.9.16-bin.zip
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/commons/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/gateway/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/huespedes/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/habitaciones/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/eureka/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/reservaciones/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"26\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 6fee37cc341b856f09ecd750dd8f549c4078a00b)
++++ b/.idea/misc.xml	(date 1787843838520)
+@@ -4,16 +4,17 @@
+   <component name="MavenProjectsManager">
+     <option name="originalFiles">
+       <list>
++        <option value="$PROJECT_DIR$/auth/pom.xml" />
+         <option value="$PROJECT_DIR$/commons/pom.xml" />
++        <option value="$PROJECT_DIR$/eureka/pom.xml" />
+         <option value="$PROJECT_DIR$/gateway/pom.xml" />
+-        <option value="$PROJECT_DIR$/huespedes/pom.xml" />
+         <option value="$PROJECT_DIR$/habitaciones/pom.xml" />
+-        <option value="$PROJECT_DIR$/eureka/pom.xml" />
++        <option value="$PROJECT_DIR$/huespedes/pom.xml" />
+         <option value="$PROJECT_DIR$/reservaciones/pom.xml" />
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="26" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile default=\"true\" name=\"Default\" enabled=\"true\" />\r\n      <profile name=\"Annotation profile for commons\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <processorPath useClasspath=\"false\">\r\n          <entry name=\"$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar\" />\r\n        </processorPath>\r\n        <module name=\"commons\" />\r\n      </profile>\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"huespedes\" />\r\n        <module name=\"habitaciones\" />\r\n        <module name=\"reservaciones\" />\r\n        <module name=\"gateway\" />\r\n        <module name=\"eureka\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n  </component>\r\n  <component name=\"JavacSettings\">\r\n    <option name=\"ADDITIONAL_OPTIONS_OVERRIDE\">\r\n      <module name=\"commons\" options=\"-parameters\" />\r\n      <module name=\"eureka\" options=\"-parameters\" />\r\n      <module name=\"gateway\" options=\"-parameters\" />\r\n      <module name=\"habitaciones\" options=\"-parameters\" />\r\n      <module name=\"huespedes\" options=\"-parameters\" />\r\n      <module name=\"reservaciones\" options=\"-parameters\" />\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision 6fee37cc341b856f09ecd750dd8f549c4078a00b)
++++ b/.idea/compiler.xml	(date 1787843995369)
+@@ -3,15 +3,6 @@
+   <component name="CompilerConfiguration">
+     <annotationProcessing>
+       <profile default="true" name="Default" enabled="true" />
+-      <profile name="Annotation profile for commons" enabled="true">
+-        <sourceOutputDir name="target/generated-sources/annotations" />
+-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+-        <outputRelativeToContentRoot value="true" />
+-        <processorPath useClasspath="false">
+-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+-        </processorPath>
+-        <module name="commons" />
+-      </profile>
+       <profile name="Maven default annotation processors profile" enabled="true">
+         <sourceOutputDir name="target/generated-sources/annotations" />
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+@@ -19,13 +10,24 @@
+         <module name="huespedes" />
+         <module name="habitaciones" />
+         <module name="reservaciones" />
+-        <module name="gateway" />
+         <module name="eureka" />
++        <module name="gateway" />
++      </profile>
++      <profile name="Annotation profile for commons" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <processorPath useClasspath="false">
++          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
++        </processorPath>
++        <module name="auth" />
++        <module name="commons" />
+       </profile>
+     </annotationProcessing>
+   </component>
+   <component name="JavacSettings">
+     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
++      <module name="auth" options="-parameters" />
+       <module name="commons" options="-parameters" />
+       <module name="eureka" options="-parameters" />
+       <module name="gateway" options="-parameters" />
+Index: auth/src/test/java/com/paola/auth/AuthApplicationTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/test/java/com/paola/auth/AuthApplicationTests.java b/auth/src/test/java/com/paola/auth/AuthApplicationTests.java
+new file mode 100644
+--- /dev/null	(date 1787150119163)
++++ b/auth/src/test/java/com/paola/auth/AuthApplicationTests.java	(date 1787150119163)
+@@ -0,0 +1,13 @@
++package com.paola.auth;
++
++import org.junit.jupiter.api.Test;
++import org.springframework.boot.test.context.SpringBootTest;
++
++@SpringBootTest
++class AuthApplicationTests {
++
++	@Test
++	void contextLoads() {
++	}
++
++}
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Encoding\">\r\n    <file url=\"file://$PROJECT_DIR$/commons/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/eureka/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/gateway/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/habitaciones/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/huespedes/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/reservaciones/src/main/java\" charset=\"UTF-8\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+--- a/.idea/encodings.xml	(revision 6fee37cc341b856f09ecd750dd8f549c4078a00b)
++++ b/.idea/encodings.xml	(date 1787843748704)
+@@ -1,6 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/auth/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/commons/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/eureka/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
+Index: auth/mvnw
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/mvnw b/auth/mvnw
+new file mode 100644
+--- /dev/null	(date 1787150119092)
++++ b/auth/mvnw	(date 1787150119092)
+@@ -0,0 +1,295 @@
++#!/bin/sh
++# ----------------------------------------------------------------------------
++# Licensed to the Apache Software Foundation (ASF) under one
++# or more contributor license agreements.  See the NOTICE file
++# distributed with this work for additional information
++# regarding copyright ownership.  The ASF licenses this file
++# to you under the Apache License, Version 2.0 (the
++# "License"); you may not use this file except in compliance
++# with the License.  You may obtain a copy of the License at
++#
++#    http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing,
++# software distributed under the License is distributed on an
++# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
++# KIND, either express or implied.  See the License for the
++# specific language governing permissions and limitations
++# under the License.
++# ----------------------------------------------------------------------------
++
++# ----------------------------------------------------------------------------
++# Apache Maven Wrapper startup batch script, version 3.3.4
++#
++# Optional ENV vars
++# -----------------
++#   JAVA_HOME - location of a JDK home dir, required when download maven via java source
++#   MVNW_REPOURL - repo url base for downloading maven distribution
++#   MVNW_USERNAME/MVNW_PASSWORD - user and password for downloading maven
++#   MVNW_VERBOSE - true: enable verbose log; debug: trace the mvnw script; others: silence the output
++# ----------------------------------------------------------------------------
++
++set -euf
++[ "${MVNW_VERBOSE-}" != debug ] || set -x
++
++# OS specific support.
++native_path() { printf %s\\n "$1"; }
++case "$(uname)" in
++CYGWIN* | MINGW*)
++  [ -z "${JAVA_HOME-}" ] || JAVA_HOME="$(cygpath --unix "$JAVA_HOME")"
++  native_path() { cygpath --path --windows "$1"; }
++  ;;
++esac
++
++# set JAVACMD and JAVACCMD
++set_java_home() {
++  # For Cygwin and MinGW, ensure paths are in Unix format before anything is touched
++  if [ -n "${JAVA_HOME-}" ]; then
++    if [ -x "$JAVA_HOME/jre/sh/java" ]; then
++      # IBM's JDK on AIX uses strange locations for the executables
++      JAVACMD="$JAVA_HOME/jre/sh/java"
++      JAVACCMD="$JAVA_HOME/jre/sh/javac"
++    else
++      JAVACMD="$JAVA_HOME/bin/java"
++      JAVACCMD="$JAVA_HOME/bin/javac"
++
++      if [ ! -x "$JAVACMD" ] || [ ! -x "$JAVACCMD" ]; then
++        echo "The JAVA_HOME environment variable is not defined correctly, so mvnw cannot run." >&2
++        echo "JAVA_HOME is set to \"$JAVA_HOME\", but \"\$JAVA_HOME/bin/java\" or \"\$JAVA_HOME/bin/javac\" does not exist." >&2
++        return 1
++      fi
++    fi
++  else
++    JAVACMD="$(
++      'set' +e
++      'unset' -f command 2>/dev/null
++      'command' -v java
++    )" || :
++    JAVACCMD="$(
++      'set' +e
++      'unset' -f command 2>/dev/null
++      'command' -v javac
++    )" || :
++
++    if [ ! -x "${JAVACMD-}" ] || [ ! -x "${JAVACCMD-}" ]; then
++      echo "The java/javac command does not exist in PATH nor is JAVA_HOME set, so mvnw cannot run." >&2
++      return 1
++    fi
++  fi
++}
++
++# hash string like Java String::hashCode
++hash_string() {
++  str="${1:-}" h=0
++  while [ -n "$str" ]; do
++    char="${str%"${str#?}"}"
++    h=$(((h * 31 + $(LC_CTYPE=C printf %d "'$char")) % 4294967296))
++    str="${str#?}"
++  done
++  printf %x\\n $h
++}
++
++verbose() { :; }
++[ "${MVNW_VERBOSE-}" != true ] || verbose() { printf %s\\n "${1-}"; }
++
++die() {
++  printf %s\\n "$1" >&2
++  exit 1
++}
++
++trim() {
++  # MWRAPPER-139:
++  #   Trims trailing and leading whitespace, carriage returns, tabs, and linefeeds.
++  #   Needed for removing poorly interpreted newline sequences when running in more
++  #   exotic environments such as mingw bash on Windows.
++  printf "%s" "${1}" | tr -d '[:space:]'
++}
++
++scriptDir="$(dirname "$0")"
++scriptName="$(basename "$0")"
++
++# parse distributionUrl and optional distributionSha256Sum, requires .mvn/wrapper/maven-wrapper.properties
++while IFS="=" read -r key value; do
++  case "${key-}" in
++  distributionUrl) distributionUrl=$(trim "${value-}") ;;
++  distributionSha256Sum) distributionSha256Sum=$(trim "${value-}") ;;
++  esac
++done <"$scriptDir/.mvn/wrapper/maven-wrapper.properties"
++[ -n "${distributionUrl-}" ] || die "cannot read distributionUrl property in $scriptDir/.mvn/wrapper/maven-wrapper.properties"
++
++case "${distributionUrl##*/}" in
++maven-mvnd-*bin.*)
++  MVN_CMD=mvnd.sh _MVNW_REPO_PATTERN=/maven/mvnd/
++  case "${PROCESSOR_ARCHITECTURE-}${PROCESSOR_ARCHITEW6432-}:$(uname -a)" in
++  *AMD64:CYGWIN* | *AMD64:MINGW*) distributionPlatform=windows-amd64 ;;
++  :Darwin*x86_64) distributionPlatform=darwin-amd64 ;;
++  :Darwin*arm64) distributionPlatform=darwin-aarch64 ;;
++  :Linux*x86_64*) distributionPlatform=linux-amd64 ;;
++  *)
++    echo "Cannot detect native platform for mvnd on $(uname)-$(uname -m), use pure java version" >&2
++    distributionPlatform=linux-amd64
++    ;;
++  esac
++  distributionUrl="${distributionUrl%-bin.*}-$distributionPlatform.zip"
++  ;;
++maven-mvnd-*) MVN_CMD=mvnd.sh _MVNW_REPO_PATTERN=/maven/mvnd/ ;;
++*) MVN_CMD="mvn${scriptName#mvnw}" _MVNW_REPO_PATTERN=/org/apache/maven/ ;;
++esac
++
++# apply MVNW_REPOURL and calculate MAVEN_HOME
++# maven home pattern: ~/.m2/wrapper/dists/{apache-maven-<version>,maven-mvnd-<version>-<platform>}/<hash>
++[ -z "${MVNW_REPOURL-}" ] || distributionUrl="$MVNW_REPOURL$_MVNW_REPO_PATTERN${distributionUrl#*"$_MVNW_REPO_PATTERN"}"
++distributionUrlName="${distributionUrl##*/}"
++distributionUrlNameMain="${distributionUrlName%.*}"
++distributionUrlNameMain="${distributionUrlNameMain%-bin}"
++MAVEN_USER_HOME="${MAVEN_USER_HOME:-${HOME}/.m2}"
++MAVEN_HOME="${MAVEN_USER_HOME}/wrapper/dists/${distributionUrlNameMain-}/$(hash_string "$distributionUrl")"
++
++exec_maven() {
++  unset MVNW_VERBOSE MVNW_USERNAME MVNW_PASSWORD MVNW_REPOURL || :
++  exec "$MAVEN_HOME/bin/$MVN_CMD" "$@" || die "cannot exec $MAVEN_HOME/bin/$MVN_CMD"
++}
++
++if [ -d "$MAVEN_HOME" ]; then
++  verbose "found existing MAVEN_HOME at $MAVEN_HOME"
++  exec_maven "$@"
++fi
++
++case "${distributionUrl-}" in
++*?-bin.zip | *?maven-mvnd-?*-?*.zip) ;;
++*) die "distributionUrl is not valid, must match *-bin.zip or maven-mvnd-*.zip, but found '${distributionUrl-}'" ;;
++esac
++
++# prepare tmp dir
++if TMP_DOWNLOAD_DIR="$(mktemp -d)" && [ -d "$TMP_DOWNLOAD_DIR" ]; then
++  clean() { rm -rf -- "$TMP_DOWNLOAD_DIR"; }
++  trap clean HUP INT TERM EXIT
++else
++  die "cannot create temp dir"
++fi
++
++mkdir -p -- "${MAVEN_HOME%/*}"
++
++# Download and Install Apache Maven
++verbose "Couldn't find MAVEN_HOME, downloading and installing it ..."
++verbose "Downloading from: $distributionUrl"
++verbose "Downloading to: $TMP_DOWNLOAD_DIR/$distributionUrlName"
++
++# select .zip or .tar.gz
++if ! command -v unzip >/dev/null; then
++  distributionUrl="${distributionUrl%.zip}.tar.gz"
++  distributionUrlName="${distributionUrl##*/}"
++fi
++
++# verbose opt
++__MVNW_QUIET_WGET=--quiet __MVNW_QUIET_CURL=--silent __MVNW_QUIET_UNZIP=-q __MVNW_QUIET_TAR=''
++[ "${MVNW_VERBOSE-}" != true ] || __MVNW_QUIET_WGET='' __MVNW_QUIET_CURL='' __MVNW_QUIET_UNZIP='' __MVNW_QUIET_TAR=v
++
++# normalize http auth
++case "${MVNW_PASSWORD:+has-password}" in
++'') MVNW_USERNAME='' MVNW_PASSWORD='' ;;
++has-password) [ -n "${MVNW_USERNAME-}" ] || MVNW_USERNAME='' MVNW_PASSWORD='' ;;
++esac
++
++if [ -z "${MVNW_USERNAME-}" ] && command -v wget >/dev/null; then
++  verbose "Found wget ... using wget"
++  wget ${__MVNW_QUIET_WGET:+"$__MVNW_QUIET_WGET"} "$distributionUrl" -O "$TMP_DOWNLOAD_DIR/$distributionUrlName" || die "wget: Failed to fetch $distributionUrl"
++elif [ -z "${MVNW_USERNAME-}" ] && command -v curl >/dev/null; then
++  verbose "Found curl ... using curl"
++  curl ${__MVNW_QUIET_CURL:+"$__MVNW_QUIET_CURL"} -f -L -o "$TMP_DOWNLOAD_DIR/$distributionUrlName" "$distributionUrl" || die "curl: Failed to fetch $distributionUrl"
++elif set_java_home; then
++  verbose "Falling back to use Java to download"
++  javaSource="$TMP_DOWNLOAD_DIR/Downloader.java"
++  targetZip="$TMP_DOWNLOAD_DIR/$distributionUrlName"
++  cat >"$javaSource" <<-END
++	public class Downloader extends java.net.Authenticator
++	{
++	  protected java.net.PasswordAuthentication getPasswordAuthentication()
++	  {
++	    return new java.net.PasswordAuthentication( System.getenv( "MVNW_USERNAME" ), System.getenv( "MVNW_PASSWORD" ).toCharArray() );
++	  }
++	  public static void main( String[] args ) throws Exception
++	  {
++	    setDefault( new Downloader() );
++	    java.nio.file.Files.copy( java.net.URI.create( args[0] ).toURL().openStream(), java.nio.file.Paths.get( args[1] ).toAbsolutePath().normalize() );
++	  }
++	}
++	END
++  # For Cygwin/MinGW, switch paths to Windows format before running javac and java
++  verbose " - Compiling Downloader.java ..."
++  "$(native_path "$JAVACCMD")" "$(native_path "$javaSource")" || die "Failed to compile Downloader.java"
++  verbose " - Running Downloader.java ..."
++  "$(native_path "$JAVACMD")" -cp "$(native_path "$TMP_DOWNLOAD_DIR")" Downloader "$distributionUrl" "$(native_path "$targetZip")"
++fi
++
++# If specified, validate the SHA-256 sum of the Maven distribution zip file
++if [ -n "${distributionSha256Sum-}" ]; then
++  distributionSha256Result=false
++  if [ "$MVN_CMD" = mvnd.sh ]; then
++    echo "Checksum validation is not supported for maven-mvnd." >&2
++    echo "Please disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties." >&2
++    exit 1
++  elif command -v sha256sum >/dev/null; then
++    if echo "$distributionSha256Sum  $TMP_DOWNLOAD_DIR/$distributionUrlName" | sha256sum -c - >/dev/null 2>&1; then
++      distributionSha256Result=true
++    fi
++  elif command -v shasum >/dev/null; then
++    if echo "$distributionSha256Sum  $TMP_DOWNLOAD_DIR/$distributionUrlName" | shasum -a 256 -c >/dev/null 2>&1; then
++      distributionSha256Result=true
++    fi
++  else
++    echo "Checksum validation was requested but neither 'sha256sum' or 'shasum' are available." >&2
++    echo "Please install either command, or disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties." >&2
++    exit 1
++  fi
++  if [ $distributionSha256Result = false ]; then
++    echo "Error: Failed to validate Maven distribution SHA-256, your Maven distribution might be compromised." >&2
++    echo "If you updated your Maven version, you need to update the specified distributionSha256Sum property." >&2
++    exit 1
++  fi
++fi
++
++# unzip and move
++if command -v unzip >/dev/null; then
++  unzip ${__MVNW_QUIET_UNZIP:+"$__MVNW_QUIET_UNZIP"} "$TMP_DOWNLOAD_DIR/$distributionUrlName" -d "$TMP_DOWNLOAD_DIR" || die "failed to unzip"
++else
++  tar xzf${__MVNW_QUIET_TAR:+"$__MVNW_QUIET_TAR"} "$TMP_DOWNLOAD_DIR/$distributionUrlName" -C "$TMP_DOWNLOAD_DIR" || die "failed to untar"
++fi
++
++# Find the actual extracted directory name (handles snapshots where filename != directory name)
++actualDistributionDir=""
++
++# First try the expected directory name (for regular distributions)
++if [ -d "$TMP_DOWNLOAD_DIR/$distributionUrlNameMain" ]; then
++  if [ -f "$TMP_DOWNLOAD_DIR/$distributionUrlNameMain/bin/$MVN_CMD" ]; then
++    actualDistributionDir="$distributionUrlNameMain"
++  fi
++fi
++
++# If not found, search for any directory with the Maven executable (for snapshots)
++if [ -z "$actualDistributionDir" ]; then
++  # enable globbing to iterate over items
++  set +f
++  for dir in "$TMP_DOWNLOAD_DIR"/*; do
++    if [ -d "$dir" ]; then
++      if [ -f "$dir/bin/$MVN_CMD" ]; then
++        actualDistributionDir="$(basename "$dir")"
++        break
++      fi
++    fi
++  done
++  set -f
++fi
++
++if [ -z "$actualDistributionDir" ]; then
++  verbose "Contents of $TMP_DOWNLOAD_DIR:"
++  verbose "$(ls -la "$TMP_DOWNLOAD_DIR")"
++  die "Could not find Maven distribution directory in extracted archive"
++fi
++
++verbose "Found extracted Maven distribution directory: $actualDistributionDir"
++printf %s\\n "$distributionUrl" >"$TMP_DOWNLOAD_DIR/$actualDistributionDir/mvnw.url"
++mv -- "$TMP_DOWNLOAD_DIR/$actualDistributionDir" "$MAVEN_HOME" || [ -d "$MAVEN_HOME" ] || die "fail to move MAVEN_HOME"
++
++clean || :
++exec_maven "$@"
+Index: gateway/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n\t<modelVersion>4.0.0</modelVersion>\r\n\t<parent>\r\n\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t<artifactId>spring-boot-starter-parent</artifactId>\r\n\t\t<version>4.1.0</version>\r\n\t\t<relativePath/> <!-- lookup parent from repository -->\r\n\t</parent>\r\n\t<groupId>com.davidpao</groupId>\r\n\t<artifactId>gateway</artifactId>\r\n\t<version>0.0.1-SNAPSHOT</version>\r\n\t<name/>\r\n\t<description/>\r\n\t<url/>\r\n\t<licenses>\r\n\t\t<license/>\r\n\t</licenses>\r\n\t<developers>\r\n\t\t<developer/>\r\n\t</developers>\r\n\t<scm>\r\n\t\t<connection/>\r\n\t\t<developerConnection/>\r\n\t\t<tag/>\r\n\t\t<url/>\r\n\t</scm>\r\n\t<properties>\r\n\t\t<java.version>17</java.version>\r\n\t\t<spring-cloud.version>2025.1.2</spring-cloud.version>\r\n\t</properties>\r\n\t<dependencies>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.cloud</groupId>\r\n\t\t\t<artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.cloud</groupId>\r\n\t\t\t<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>\r\n\t\t</dependency>\r\n\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\r\n\t\t\t<scope>test</scope>\r\n\t\t</dependency>\r\n\t</dependencies>\r\n\t<dependencyManagement>\r\n\t\t<dependencies>\r\n\t\t\t<dependency>\r\n\t\t\t\t<groupId>org.springframework.cloud</groupId>\r\n\t\t\t\t<artifactId>spring-cloud-dependencies</artifactId>\r\n\t\t\t\t<version>${spring-cloud.version}</version>\r\n\t\t\t\t<type>pom</type>\r\n\t\t\t\t<scope>import</scope>\r\n\t\t\t</dependency>\r\n\t\t</dependencies>\r\n\t</dependencyManagement>\r\n\r\n\t<build>\r\n\t\t<plugins>\r\n\t\t\t<plugin>\r\n\t\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\r\n\t\t\t</plugin>\r\n\t\t</plugins>\r\n\t</build>\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gateway/pom.xml b/gateway/pom.xml
+--- a/gateway/pom.xml	(revision 6fee37cc341b856f09ecd750dd8f549c4078a00b)
++++ b/gateway/pom.xml	(date 1787843363769)
+@@ -40,6 +40,17 @@
+ 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+ 		</dependency>
+ 
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-security-oauth2-resource-server</artifactId>
++		</dependency>
++
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-security-oauth2-resource-server-test</artifactId>
++			<scope>test</scope>
++		</dependency>
++
+ 		<dependency>
+ 			<groupId>org.springframework.boot</groupId>
+ 			<artifactId>spring-boot-starter-test</artifactId>
+Index: gateway/src/main/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>server:\r\n  port: 8090\r\n\r\nspring:\r\n  application:\r\n    name: gateway\r\n  cloud:\r\n    gateway:\r\n      server:\r\n        webflux:\r\n          routes:\r\n            - id: huespedes\r\n              uri: lb://huespedes\r\n              predicates:\r\n                - Path=/api/huespedes/**\r\n              filters:\r\n                - StripPrefix=2\r\n\r\n            - id: habitaciones\r\n              uri: lb://habitaciones\r\n              predicates:\r\n                - Path=/api/habitaciones/**\r\n              filters:\r\n                - StripPrefix=2\r\n\r\n            - id: citas\r\n              uri: lb://citas\r\n              predicates:\r\n                - Path=/api/citas/**\r\n              filters:\r\n                - StripPrefix=2\r\n    loadbalancer:\r\n      enabled: true\r\neureka:\r\n  client:\r\n    service-url:\r\n      defaultZone: http://localhost:8761/eureka\r\n  instance:\r\n    prefer-ip-adress: true
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gateway/src/main/resources/application.yml b/gateway/src/main/resources/application.yml
+--- a/gateway/src/main/resources/application.yml	(revision 6fee37cc341b856f09ecd750dd8f549c4078a00b)
++++ b/gateway/src/main/resources/application.yml	(date 1787843363786)
+@@ -4,6 +4,11 @@
+ spring:
+   application:
+     name: gateway
++  security:
++    oauth2:
++      resourceserver:
++        jwt:
++          jwk-set-uri: http://localhost:8090/oauth/jwks
+   cloud:
+     gateway:
+       server:
+Index: auth/src/main/java/com/paola/auth/dto/UsuarioResponse.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/dto/UsuarioResponse.java b/auth/src/main/java/com/paola/auth/dto/UsuarioResponse.java
+new file mode 100644
+--- /dev/null	(date 1787151102479)
++++ b/auth/src/main/java/com/paola/auth/dto/UsuarioResponse.java	(date 1787151102479)
+@@ -0,0 +1,8 @@
++package com.paola.auth.dto;
++import java.util.Set;
++
++public record UsuarioResponse (
++        String username,
++        Set<String> roles
++) {
++}
+Index: auth/src/main/java/com/paola/auth/dto/UsuarioRequest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/dto/UsuarioRequest.java b/auth/src/main/java/com/paola/auth/dto/UsuarioRequest.java
+new file mode 100644
+--- /dev/null	(date 1787151044799)
++++ b/auth/src/main/java/com/paola/auth/dto/UsuarioRequest.java	(date 1787151044799)
+@@ -0,0 +1,20 @@
++package com.paola.auth.dto;
++
++import java.util.Set;
++
++import jakarta.validation.constraints.NotBlank;
++import jakarta.validation.constraints.NotNull;
++import jakarta.validation.constraints.Size;
++
++public record UsuarioRequest(@NotBlank(message = "El username es requerido")
++                             @Size(min = 4, max = 20)
++                             String username,
++
++                             @NotBlank(message = "La contraseña es requerida")
++                             @Size(min = 8, max = 20)
++                             String password,
++
++                             @NotNull(message = "Los roles son requeridos")
++                             @Size(min = 1, message = "Debe haber al menos 1 rol")
++                             Set<String> roles) {
++}
+Index: auth/src/main/java/com/paola/auth/dto/TokenResponse.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/dto/TokenResponse.java b/auth/src/main/java/com/paola/auth/dto/TokenResponse.java
+new file mode 100644
+--- /dev/null	(date 1787151026001)
++++ b/auth/src/main/java/com/paola/auth/dto/TokenResponse.java	(date 1787151026001)
+@@ -0,0 +1,4 @@
++package com.paola.auth.dto;
++
++public record TokenResponse(String token) {
++}
+Index: auth/src/main/java/com/paola/auth/dto/LoginRequest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/dto/LoginRequest.java b/auth/src/main/java/com/paola/auth/dto/LoginRequest.java
+new file mode 100644
+--- /dev/null	(date 1787151017167)
++++ b/auth/src/main/java/com/paola/auth/dto/LoginRequest.java	(date 1787151017167)
+@@ -0,0 +1,12 @@
++package com.paola.auth.dto;
++import jakarta.validation.constraints.NotBlank;
++
++public record LoginRequest(
++
++        @NotBlank(message = "El username es requerido")
++        String username,
++
++        @NotBlank(message = "La contraseña es requerida")
++        String password
++) {
++}
+Index: auth/src/main/java/com/paola/auth/config/SecurityConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/config/SecurityConfig.java b/auth/src/main/java/com/paola/auth/config/SecurityConfig.java
+new file mode 100644
+--- /dev/null	(date 1787154540981)
++++ b/auth/src/main/java/com/paola/auth/config/SecurityConfig.java	(date 1787154540981)
+@@ -0,0 +1,292 @@
++package com.paola.auth.config;
++
++import org.springframework.context.annotation.Configuration;
++import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
++import org.springframework.security.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
++import org.springframework.security.config.annotation.web.configurers.oauth2.server.authorization.OAuth2AuthorizationServerConfigurer;
++
++import java.security.KeyPair;
++import java.security.KeyPairGenerator;
++import java.security.interfaces.RSAPrivateKey;
++import java.security.interfaces.RSAPublicKey;
++import java.util.List;
++import java.util.Set;
++import java.util.UUID;
++
++import org.springframework.boot.CommandLineRunner;
++import org.springframework.context.annotation.Bean;
++import org.springframework.context.annotation.Configuration;
++import org.springframework.core.annotation.Order;
++import org.springframework.http.MediaType;
++import org.springframework.security.config.Customizer;
++import org.springframework.security.config.annotation.web.builders.HttpSecurity;
++import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
++import org.springframework.security.core.userdetails.UserDetailsService;
++import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
++import org.springframework.security.crypto.password.PasswordEncoder;
++import org.springframework.security.oauth2.core.AuthorizationGrantType;
++import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
++import org.springframework.security.oauth2.core.oidc.OidcScopes;
++import org.springframework.security.oauth2.jwt.JwtDecoder;
++import org.springframework.security.oauth2.server.authorization.client.InMemoryRegisteredClientRepository;
++import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
++import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
++import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
++import org.springframework.security.oauth2.server.authorization.settings.ClientSettings;
++import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
++import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
++import org.springframework.security.web.SecurityFilterChain;
++import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
++import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
++import org.springframework.web.cors.CorsConfiguration;
++
++import com.paola.auth.entities.Rol;
++import com.paola.auth.entities.Usuario;
++import com.paola.auth.repositories.RolRepository;
++import com.paola.auth.repositories.UsuarioRepository;
++import com.paola.auth.services.CustomUserDetails;
++import com.nimbusds.jose.jwk.JWKSet;
++import com.nimbusds.jose.jwk.RSAKey;
++import com.nimbusds.jose.jwk.source.ImmutableJWKSet;
++import com.nimbusds.jose.jwk.source.JWKSource;
++import com.nimbusds.jose.proc.SecurityContext;
++@Configuration
++@EnableWebSecurity
++public class SecurityConfig {
++    @Bean
++    @Order(1)
++    SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http)
++            throws Exception {
++
++        OAuth2AuthorizationServerConfigurer authorizationServerConfigurer =
++               new  OAuth2AuthorizationServerConfigurer();
++
++        http
++                // Aplica esta configuración solo a los endpoints del Authorization Server
++                .securityMatcher(authorizationServerConfigurer.getEndpointsMatcher())
++                .with(authorizationServerConfigurer, (authorizationServer) ->
++                        authorizationServer
++                                .oidc(Customizer.withDefaults()) // Habilita OpenID Connect 1.0
++                )
++                .authorizeHttpRequests((authorize) ->
++                        authorize
++                                .anyRequest().authenticated() // Todo requiere autenticación
++                )
++                .exceptionHandling((exceptions) -> exceptions
++                        // Si el cliente espera HTML y no está autenticado → redirige a /login
++                        .defaultAuthenticationEntryPointFor(
++                                new LoginUrlAuthenticationEntryPoint("/login"),
++                                new MediaTypeRequestMatcher(MediaType.TEXT_HTML)
++                        )
++                );
++
++        return http.build();
++    }
++
++
++    /**
++     * Configuración de seguridad principal de la aplicación.
++     *
++     * - Permite acceso libre a /api/login
++     * - Requiere rol ADMIN para /admin/**
++     * - Requiere autenticación para el resto
++     * - Desactiva CSRF (útil para APIs REST)
++     * - Configura CORS para permitir peticiones desde Angular (localhost:4200)
++     * - Configura la aplicación como Resource Server usando JWT
++     */
++    @Bean
++    @Order(2)
++    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http)
++            throws Exception {
++
++        http
++                .authorizeHttpRequests((authorize) -> authorize
++                        .requestMatchers("/api/login").permitAll()
++                        .requestMatchers("/admin/**").hasRole("ADMIN")
++                        .anyRequest().authenticated()
++                )
++                .csrf(csrf -> csrf.disable()) // Se desactiva CSRF para API REST
++                .cors(cors -> cors.configurationSource(request -> {
++                    CorsConfiguration corsConfiguration = new CorsConfiguration();
++                    corsConfiguration.setAllowedOrigins(List.of("http://localhost:4200"));
++                    corsConfiguration.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
++                    corsConfiguration.setAllowedHeaders(List.of("Authorization", "Content-Type"));
++                    corsConfiguration.setAllowCredentials(true);
++                    return corsConfiguration;
++                }))
++                // Configura la app como Resource Server que valida JWT
++                .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt ->
++                        jwt.jwtAuthenticationConverter(jwtAuthenticationConverter())));
++
++        return http.build();
++    }
++
++    /**
++     * Define el servicio que carga los usuarios desde base de datos.
++     * Usa tu implementación personalizada CustomUserDetails.
++     */
++    @Bean
++    UserDetailsService userDetailsService(CustomUserDetails customUserDetails) {
++        return customUserDetails;
++    }
++
++    /**
++     * Define el codificador de contraseñas.
++     * Se utiliza BCrypt para almacenar contraseñas de forma segura.
++     */
++    @Bean
++    PasswordEncoder passwordEncoder() {
++        return new BCryptPasswordEncoder();
++    }
++
++    /**
++     * Personaliza cómo se extraen los roles desde el JWT.
++     *
++     * - Lee los roles desde el claim "roles".
++     * - Elimina el prefijo automático "ROLE_" para que coincida con tu base de datos.
++     */
++    @Bean
++    JwtAuthenticationConverter jwtAuthenticationConverter() {
++        JwtGrantedAuthoritiesConverter grantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
++        grantedAuthoritiesConverter.setAuthoritiesClaimName("roles");
++        grantedAuthoritiesConverter.setAuthorityPrefix("");
++
++        JwtAuthenticationConverter jwtAuthenticationConverter = new JwtAuthenticationConverter();
++        jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(grantedAuthoritiesConverter);
++        return jwtAuthenticationConverter;
++    }
++
++    /**
++     * Registra un cliente OAuth2 en memoria.
++     *
++     * - Define clientId y clientSecret.
++     * - Usa Authorization Code + Refresh Token.
++     * - Define URIs de redirección.
++     * - Habilita scopes OpenID y Profile.
++     * - Requiere consentimiento del usuario.
++     */
++    @Bean
++    RegisteredClientRepository registeredClientRepository() {
++
++        RegisteredClient oidcClient = RegisteredClient.withId(UUID.randomUUID().toString())
++                .clientId("oidc-client")
++                .clientSecret("{noop}secret")
++                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
++                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
++                .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
++                .redirectUri("http://127.0.0.1:8080/login/oauth2/code/oidc-client")
++                .postLogoutRedirectUri("http://127.0.0.1:8080/")
++                .scope(OidcScopes.OPENID)
++                .scope(OidcScopes.PROFILE)
++                .clientSettings(ClientSettings.builder().requireAuthorizationConsent(true).build())
++                .build();
++
++        return new InMemoryRegisteredClientRepository(oidcClient);
++    }
++
++    /**
++     * Genera un par de claves RSA para firmar los JWT.
++     *
++     * - Crea una clave pública y privada.
++     * - Se usa para firmar y validar tokens.
++     */
++    @Bean
++    JWKSource<SecurityContext> jwkSource() {
++
++        KeyPair keyPair = generateRsaKey();
++        RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
++        RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
++
++        RSAKey rsaKey = new RSAKey.Builder(publicKey)
++                .privateKey(privateKey)
++                .keyID(UUID.randomUUID().toString())
++                .build();
++
++        JWKSet jwkSet = new JWKSet(rsaKey);
++
++        return new ImmutableJWKSet<>(jwkSet);
++    }
++
++    /**
++     * Genera un KeyPair RSA de 2048 bits.
++     * Se usa para firmar los tokens JWT.
++     */
++    private static KeyPair generateRsaKey() {
++        try {
++            KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
++            keyPairGenerator.initialize(2048);
++            return keyPairGenerator.generateKeyPair();
++        } catch (Exception ex) {
++            throw new IllegalStateException(ex);
++        }
++    }
++
++    /**
++     * Configura el decodificador JWT usando la clave pública.
++     * Permite validar la firma de los tokens.
++     */
++    @Bean
++    JwtDecoder jwtDecoder(JWKSource<SecurityContext> jwkSource) {
++        return OAuth2AuthorizationServerConfiguration.jwtDecoder(jwkSource);
++    }
++
++    /**
++     * Configuración general del Authorization Server.
++     * Aquí podrías personalizar issuer, endpoints, etc.
++     */
++    @Bean
++    AuthorizationServerSettings authorizationServerSettings() {
++        return AuthorizationServerSettings.builder().build();
++    }
++
++    /**
++     * Inicializa datos en la base de datos al arrancar la aplicación.
++     *
++     * - Crea roles ROLE_ADMIN y ROLE_USER si no existen.
++     * - Crea usuario admin/admin con rol ADMIN.
++     * - Crea usuario usuario/usuario con rol USER.
++     */
++    @Bean
++    CommandLineRunner initData(UsuarioRepository userRepo,
++                               RolRepository rolRepo,
++                               PasswordEncoder encoder) {
++
++        return args -> {
++
++            Rol adminRole = rolRepo.findByNombre("ROLE_ADMIN")
++                    .orElseGet(() -> {
++                        Rol r = new Rol();
++                        r.setNombre("ROLE_ADMIN");
++                        return rolRepo.save(r);
++                    });
++
++            Rol userRole = rolRepo.findByNombre("ROLE_USER")
++                    .orElseGet(() -> {
++                        Rol r = new Rol();
++                        r.setNombre("ROLE_USER");
++                        return rolRepo.save(r);
++                    });
++
++            if (userRepo.findByUsername("admin").isEmpty()) {
++                Usuario admin = new Usuario();
++                admin.setUsername("admin");
++                admin.setPassword(encoder.encode("admin"));
++                admin.setRoles(Set.of(adminRole));
++                userRepo.save(admin);
++            }
++
++            if (userRepo.findByUsername("usuario").isEmpty()) {
++                Usuario user = new Usuario();
++                user.setUsername("usuario");
++                user.setPassword(encoder.encode("usuario"));
++                user.setRoles(Set.of(userRole));
++                userRepo.save(user);
++            }
++        };
++    }
++}
++
++
++
++
++
+Index: auth/src/main/java/com/paola/auth/dto/CustomErrorResponse.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/dto/CustomErrorResponse.java b/auth/src/main/java/com/paola/auth/dto/CustomErrorResponse.java
+new file mode 100644
+--- /dev/null	(date 1787150990106)
++++ b/auth/src/main/java/com/paola/auth/dto/CustomErrorResponse.java	(date 1787150990106)
+@@ -0,0 +1,5 @@
++package com.paola.auth.dto;
++
++public record CustomErrorResponse(int codigo, String mensaje) {
++
++}
+Index: auth/src/main/java/com/paola/auth/entities/Usuario.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/entities/Usuario.java b/auth/src/main/java/com/paola/auth/entities/Usuario.java
+new file mode 100644
+--- /dev/null	(date 1787150709356)
++++ b/auth/src/main/java/com/paola/auth/entities/Usuario.java	(date 1787150709356)
+@@ -0,0 +1,46 @@
++package com.paola.auth.entities;
++
++import java.util.Set;
++
++import jakarta.persistence.Column;
++import jakarta.persistence.Entity;
++import jakarta.persistence.FetchType;
++import jakarta.persistence.GeneratedValue;
++import jakarta.persistence.GenerationType;
++import jakarta.persistence.Id;
++import jakarta.persistence.JoinColumn;
++import jakarta.persistence.JoinTable;
++import jakarta.persistence.ManyToMany;
++import jakarta.persistence.Table;
++import lombok.AllArgsConstructor;
++import lombok.Getter;
++import lombok.NoArgsConstructor;
++import lombok.Setter;
++
++@Entity
++@Table(name = "USUARIOS_OAUTH")
++@AllArgsConstructor
++@NoArgsConstructor
++@Getter
++@Setter
++public class Usuario {
++
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    @Column(name = "ID_USUARIO")
++    private Long id;
++
++    @Column(name = "USERNAME", nullable = false, length = 20, unique = true)
++    private String username;
++
++    @Column(name = "PASSWORD", nullable = false)
++    private String password;
++
++    @ManyToMany(fetch = FetchType.EAGER)
++    @JoinTable(
++            name = "USUARIOS_ROLES",
++            joinColumns = @JoinColumn(name = "ID_USUARIO"),
++            inverseJoinColumns = @JoinColumn(name = "ID_ROL")
++    )
++    private Set<Rol> roles;
++}
+Index: auth/src/main/java/com/paola/auth/entities/Rol.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/entities/Rol.java b/auth/src/main/java/com/paola/auth/entities/Rol.java
+new file mode 100644
+--- /dev/null	(date 1787150615585)
++++ b/auth/src/main/java/com/paola/auth/entities/Rol.java	(date 1787150615585)
+@@ -0,0 +1,30 @@
++package com.paola.auth.entities;
++
++import jakarta.persistence.Column;
++import jakarta.persistence.Entity;
++import jakarta.persistence.GeneratedValue;
++import jakarta.persistence.GenerationType;
++import jakarta.persistence.Id;
++import jakarta.persistence.Table;
++import lombok.AllArgsConstructor;
++import lombok.Getter;
++import lombok.NoArgsConstructor;
++import lombok.Setter;
++
++@Entity
++@Table(name = "ROLES_OAUTH")
++@AllArgsConstructor
++@NoArgsConstructor
++@Getter
++@Setter
++
++public class Rol {
++
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    @Column(name = "ID_ROL")
++    private Long id;
++
++    @Column(name = "NOMBRE", nullable = false, length = 15, unique = true)
++    private String nombre;
++}
+Index: auth/src/main/java/com/paola/auth/mapper/UsuarioMapper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/mapper/UsuarioMapper.java b/auth/src/main/java/com/paola/auth/mapper/UsuarioMapper.java
+new file mode 100644
+--- /dev/null	(date 1787151327542)
++++ b/auth/src/main/java/com/paola/auth/mapper/UsuarioMapper.java	(date 1787151327542)
+@@ -0,0 +1,35 @@
++package com.paola.auth.mapper;
++import java.util.Set;
++import java.util.stream.Collectors;
++
++import org.springframework.stereotype.Component;
++
++import com.paola.auth.dto.UsuarioRequest;
++import com.paola.auth.dto.UsuarioResponse;
++import com.paola.auth.entities.Rol;
++import com.paola.auth.entities.Usuario;
++
++@Component
++
++public class UsuarioMapper{
++public UsuarioResponse entityToResponse(Usuario usuario) {
++    if (usuario == null) return null;
++    return new UsuarioResponse(
++            usuario.getUsername(),
++            usuario.getRoles().stream()
++                    .map(Rol::getNombre)
++                    .collect(Collectors.toSet())
++    );
++}
++
++public Usuario requestToEntity(UsuarioRequest request, String password, Set<Rol> roles) {
++    if (request == null) return null;
++    Usuario usuario = new Usuario();
++    usuario.setUsername(request.username().trim());
++    usuario.setPassword(password.trim());
++    usuario.setRoles(roles);
++    return usuario;
++}
++}
++
++
+Index: auth/src/main/java/com/paola/auth/services/AuthServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/services/AuthServiceImpl.java b/auth/src/main/java/com/paola/auth/services/AuthServiceImpl.java
+new file mode 100644
+--- /dev/null	(date 1787152170597)
++++ b/auth/src/main/java/com/paola/auth/services/AuthServiceImpl.java	(date 1787152170597)
+@@ -0,0 +1,85 @@
++package com.paola.auth.services;
++
++import java.time.Instant;
++import java.util.Date;
++import java.util.UUID;
++
++import org.springframework.security.core.userdetails.UserDetails;
++import org.springframework.security.core.userdetails.UserDetailsService;
++import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
++import org.springframework.stereotype.Service;
++
++import com.paola.auth.dto.LoginRequest;
++import com.paola.auth.dto.TokenResponse;
++import com.nimbusds.jose.JWSAlgorithm;
++import com.nimbusds.jose.JWSHeader;
++import com.nimbusds.jose.JWSSigner;
++import com.nimbusds.jose.crypto.RSASSASigner;
++import com.nimbusds.jose.jwk.JWKMatcher;
++import com.nimbusds.jose.jwk.JWKSelector;
++import com.nimbusds.jose.jwk.KeyType;
++import com.nimbusds.jose.jwk.RSAKey;
++import com.nimbusds.jose.jwk.source.JWKSource;
++import com.nimbusds.jose.proc.SecurityContext;
++import com.nimbusds.jwt.JWTClaimsSet;
++import com.nimbusds.jwt.SignedJWT;
++
++import lombok.extern.slf4j.Slf4j;
++
++@Service
++@Slf4j
++
++public class AuthServiceImpl implements AuthService{
++
++    private final UserDetailsService userDetailsService;
++
++    private final RSAKey rsaKey;
++
++    public AuthServiceImpl(UserDetailsService userDetailsService, JWKSource<SecurityContext> jwkSource) {
++        this.userDetailsService = userDetailsService;
++        try {
++            JWKSelector jwkSelector = new JWKSelector(
++                    new JWKMatcher.Builder().keyType(KeyType.RSA).build()
++            );
++            var jwks = jwkSource.get(jwkSelector, null);
++            if (jwks == null || jwks.isEmpty())
++                throw new RuntimeException("No se pudo obtener la clave RSA");
++            rsaKey = (RSAKey) jwks.get(0);
++        } catch (Exception e) {
++            throw new RuntimeException("No se pudo obtener la clave RSA");
++        }
++    }
++
++    @Override
++    public TokenResponse autenticar(LoginRequest request) throws Exception {
++        log.info("Cargando usuario {}", request.username());
++        UserDetails userDetails = userDetailsService.loadUserByUsername(request.username());
++
++        if (userDetails == null || !new BCryptPasswordEncoder().matches(
++                request.password(), userDetails.getPassword()) ) {
++            throw new IllegalArgumentException("Credenciales inválidas");
++        }
++
++        Instant now = Instant.now();
++
++        JWTClaimsSet claimsSet = new JWTClaimsSet.Builder()
++                .issuer("http://localhost:9000")
++                .subject(userDetails.getUsername())
++                .issueTime(Date.from(now))
++                .expirationTime(Date.from(now.plusSeconds(3600)))
++                .jwtID(UUID.randomUUID().toString())
++                .claim("roles", userDetails.getAuthorities()
++                        .stream().map(authority -> authority.getAuthority()).toList())
++                .build();
++
++        SignedJWT signedJWT = new SignedJWT(
++                new JWSHeader.Builder(JWSAlgorithm.RS256).keyID(rsaKey.getKeyID()).build(),
++                claimsSet
++        );
++
++        JWSSigner signer = new RSASSASigner(rsaKey.toPrivateKey());
++        signedJWT.sign(signer);
++
++        return new TokenResponse(signedJWT.serialize());
++    }
++}
+Index: auth/mvnw.cmd
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/mvnw.cmd b/auth/mvnw.cmd
+new file mode 100644
+--- /dev/null	(date 1787150119011)
++++ b/auth/mvnw.cmd	(date 1787150119011)
+@@ -0,0 +1,189 @@
++<# : batch portion
++@REM ----------------------------------------------------------------------------
++@REM Licensed to the Apache Software Foundation (ASF) under one
++@REM or more contributor license agreements.  See the NOTICE file
++@REM distributed with this work for additional information
++@REM regarding copyright ownership.  The ASF licenses this file
++@REM to you under the Apache License, Version 2.0 (the
++@REM "License"); you may not use this file except in compliance
++@REM with the License.  You may obtain a copy of the License at
++@REM
++@REM    http://www.apache.org/licenses/LICENSE-2.0
++@REM
++@REM Unless required by applicable law or agreed to in writing,
++@REM software distributed under the License is distributed on an
++@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
++@REM KIND, either express or implied.  See the License for the
++@REM specific language governing permissions and limitations
++@REM under the License.
++@REM ----------------------------------------------------------------------------
++
++@REM ----------------------------------------------------------------------------
++@REM Apache Maven Wrapper startup batch script, version 3.3.4
++@REM
++@REM Optional ENV vars
++@REM   MVNW_REPOURL - repo url base for downloading maven distribution
++@REM   MVNW_USERNAME/MVNW_PASSWORD - user and password for downloading maven
++@REM   MVNW_VERBOSE - true: enable verbose log; others: silence the output
++@REM ----------------------------------------------------------------------------
++
++@IF "%__MVNW_ARG0_NAME__%"=="" (SET __MVNW_ARG0_NAME__=%~nx0)
++@SET __MVNW_CMD__=
++@SET __MVNW_ERROR__=
++@SET __MVNW_PSMODULEP_SAVE=%PSModulePath%
++@SET PSModulePath=
++@FOR /F "usebackq tokens=1* delims==" %%A IN (`powershell -noprofile "& {$scriptDir='%~dp0'; $script='%__MVNW_ARG0_NAME__%'; icm -ScriptBlock ([Scriptblock]::Create((Get-Content -Raw '%~f0'))) -NoNewScope}"`) DO @(
++  IF "%%A"=="MVN_CMD" (set __MVNW_CMD__=%%B) ELSE IF "%%B"=="" (echo %%A) ELSE (echo %%A=%%B)
++)
++@SET PSModulePath=%__MVNW_PSMODULEP_SAVE%
++@SET __MVNW_PSMODULEP_SAVE=
++@SET __MVNW_ARG0_NAME__=
++@SET MVNW_USERNAME=
++@SET MVNW_PASSWORD=
++@IF NOT "%__MVNW_CMD__%"=="" ("%__MVNW_CMD__%" %*)
++@echo Cannot start maven from wrapper >&2 && exit /b 1
++@GOTO :EOF
++: end batch / begin powershell #>
++
++$ErrorActionPreference = "Stop"
++if ($env:MVNW_VERBOSE -eq "true") {
++  $VerbosePreference = "Continue"
++}
++
++# calculate distributionUrl, requires .mvn/wrapper/maven-wrapper.properties
++$distributionUrl = (Get-Content -Raw "$scriptDir/.mvn/wrapper/maven-wrapper.properties" | ConvertFrom-StringData).distributionUrl
++if (!$distributionUrl) {
++  Write-Error "cannot read distributionUrl property in $scriptDir/.mvn/wrapper/maven-wrapper.properties"
++}
++
++switch -wildcard -casesensitive ( $($distributionUrl -replace '^.*/','') ) {
++  "maven-mvnd-*" {
++    $USE_MVND = $true
++    $distributionUrl = $distributionUrl -replace '-bin\.[^.]*$',"-windows-amd64.zip"
++    $MVN_CMD = "mvnd.cmd"
++    break
++  }
++  default {
++    $USE_MVND = $false
++    $MVN_CMD = $script -replace '^mvnw','mvn'
++    break
++  }
++}
++
++# apply MVNW_REPOURL and calculate MAVEN_HOME
++# maven home pattern: ~/.m2/wrapper/dists/{apache-maven-<version>,maven-mvnd-<version>-<platform>}/<hash>
++if ($env:MVNW_REPOURL) {
++  $MVNW_REPO_PATTERN = if ($USE_MVND -eq $False) { "/org/apache/maven/" } else { "/maven/mvnd/" }
++  $distributionUrl = "$env:MVNW_REPOURL$MVNW_REPO_PATTERN$($distributionUrl -replace "^.*$MVNW_REPO_PATTERN",'')"
++}
++$distributionUrlName = $distributionUrl -replace '^.*/',''
++$distributionUrlNameMain = $distributionUrlName -replace '\.[^.]*$','' -replace '-bin$',''
++
++$MAVEN_M2_PATH = "$HOME/.m2"
++if ($env:MAVEN_USER_HOME) {
++  $MAVEN_M2_PATH = "$env:MAVEN_USER_HOME"
++}
++
++if (-not (Test-Path -Path $MAVEN_M2_PATH)) {
++    New-Item -Path $MAVEN_M2_PATH -ItemType Directory | Out-Null
++}
++
++$MAVEN_WRAPPER_DISTS = $null
++if ((Get-Item $MAVEN_M2_PATH).Target[0] -eq $null) {
++  $MAVEN_WRAPPER_DISTS = "$MAVEN_M2_PATH/wrapper/dists"
++} else {
++  $MAVEN_WRAPPER_DISTS = (Get-Item $MAVEN_M2_PATH).Target[0] + "/wrapper/dists"
++}
++
++$MAVEN_HOME_PARENT = "$MAVEN_WRAPPER_DISTS/$distributionUrlNameMain"
++$MAVEN_HOME_NAME = ([System.Security.Cryptography.SHA256]::Create().ComputeHash([byte[]][char[]]$distributionUrl) | ForEach-Object {$_.ToString("x2")}) -join ''
++$MAVEN_HOME = "$MAVEN_HOME_PARENT/$MAVEN_HOME_NAME"
++
++if (Test-Path -Path "$MAVEN_HOME" -PathType Container) {
++  Write-Verbose "found existing MAVEN_HOME at $MAVEN_HOME"
++  Write-Output "MVN_CMD=$MAVEN_HOME/bin/$MVN_CMD"
++  exit $?
++}
++
++if (! $distributionUrlNameMain -or ($distributionUrlName -eq $distributionUrlNameMain)) {
++  Write-Error "distributionUrl is not valid, must end with *-bin.zip, but found $distributionUrl"
++}
++
++# prepare tmp dir
++$TMP_DOWNLOAD_DIR_HOLDER = New-TemporaryFile
++$TMP_DOWNLOAD_DIR = New-Item -Itemtype Directory -Path "$TMP_DOWNLOAD_DIR_HOLDER.dir"
++$TMP_DOWNLOAD_DIR_HOLDER.Delete() | Out-Null
++trap {
++  if ($TMP_DOWNLOAD_DIR.Exists) {
++    try { Remove-Item $TMP_DOWNLOAD_DIR -Recurse -Force | Out-Null }
++    catch { Write-Warning "Cannot remove $TMP_DOWNLOAD_DIR" }
++  }
++}
++
++New-Item -Itemtype Directory -Path "$MAVEN_HOME_PARENT" -Force | Out-Null
++
++# Download and Install Apache Maven
++Write-Verbose "Couldn't find MAVEN_HOME, downloading and installing it ..."
++Write-Verbose "Downloading from: $distributionUrl"
++Write-Verbose "Downloading to: $TMP_DOWNLOAD_DIR/$distributionUrlName"
++
++$webclient = New-Object System.Net.WebClient
++if ($env:MVNW_USERNAME -and $env:MVNW_PASSWORD) {
++  $webclient.Credentials = New-Object System.Net.NetworkCredential($env:MVNW_USERNAME, $env:MVNW_PASSWORD)
++}
++[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
++$webclient.DownloadFile($distributionUrl, "$TMP_DOWNLOAD_DIR/$distributionUrlName") | Out-Null
++
++# If specified, validate the SHA-256 sum of the Maven distribution zip file
++$distributionSha256Sum = (Get-Content -Raw "$scriptDir/.mvn/wrapper/maven-wrapper.properties" | ConvertFrom-StringData).distributionSha256Sum
++if ($distributionSha256Sum) {
++  if ($USE_MVND) {
++    Write-Error "Checksum validation is not supported for maven-mvnd. `nPlease disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties."
++  }
++  Import-Module $PSHOME\Modules\Microsoft.PowerShell.Utility -Function Get-FileHash
++  if ((Get-FileHash "$TMP_DOWNLOAD_DIR/$distributionUrlName" -Algorithm SHA256).Hash.ToLower() -ne $distributionSha256Sum) {
++    Write-Error "Error: Failed to validate Maven distribution SHA-256, your Maven distribution might be compromised. If you updated your Maven version, you need to update the specified distributionSha256Sum property."
++  }
++}
++
++# unzip and move
++Expand-Archive "$TMP_DOWNLOAD_DIR/$distributionUrlName" -DestinationPath "$TMP_DOWNLOAD_DIR" | Out-Null
++
++# Find the actual extracted directory name (handles snapshots where filename != directory name)
++$actualDistributionDir = ""
++
++# First try the expected directory name (for regular distributions)
++$expectedPath = Join-Path "$TMP_DOWNLOAD_DIR" "$distributionUrlNameMain"
++$expectedMvnPath = Join-Path "$expectedPath" "bin/$MVN_CMD"
++if ((Test-Path -Path $expectedPath -PathType Container) -and (Test-Path -Path $expectedMvnPath -PathType Leaf)) {
++  $actualDistributionDir = $distributionUrlNameMain
++}
++
++# If not found, search for any directory with the Maven executable (for snapshots)
++if (!$actualDistributionDir) {
++  Get-ChildItem -Path "$TMP_DOWNLOAD_DIR" -Directory | ForEach-Object {
++    $testPath = Join-Path $_.FullName "bin/$MVN_CMD"
++    if (Test-Path -Path $testPath -PathType Leaf) {
++      $actualDistributionDir = $_.Name
++    }
++  }
++}
++
++if (!$actualDistributionDir) {
++  Write-Error "Could not find Maven distribution directory in extracted archive"
++}
++
++Write-Verbose "Found extracted Maven distribution directory: $actualDistributionDir"
++Rename-Item -Path "$TMP_DOWNLOAD_DIR/$actualDistributionDir" -NewName $MAVEN_HOME_NAME | Out-Null
++try {
++  Move-Item -Path "$TMP_DOWNLOAD_DIR/$MAVEN_HOME_NAME" -Destination $MAVEN_HOME_PARENT | Out-Null
++} catch {
++  if (! (Test-Path -Path "$MAVEN_HOME" -PathType Container)) {
++    Write-Error "fail to move MAVEN_HOME"
++  }
++} finally {
++  try { Remove-Item $TMP_DOWNLOAD_DIR -Recurse -Force | Out-Null }
++  catch { Write-Warning "Cannot remove $TMP_DOWNLOAD_DIR" }
++}
++
++Write-Output "MVN_CMD=$MAVEN_HOME/bin/$MVN_CMD"
+Index: auth/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/pom.xml b/auth/pom.xml
+new file mode 100644
+--- /dev/null	(date 1787150118904)
++++ b/auth/pom.xml	(date 1787150118904)
+@@ -0,0 +1,127 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
++	<modelVersion>4.0.0</modelVersion>
++	<parent>
++		<groupId>org.springframework.boot</groupId>
++		<artifactId>spring-boot-starter-parent</artifactId>
++		<version>4.1.0</version>
++		<relativePath/> <!-- lookup parent from repository -->
++	</parent>
++	<groupId>com.paola</groupId>
++	<artifactId>auth</artifactId>
++	<version>0.0.1-SNAPSHOT</version>
++	<name/>
++	<description/>
++	<url/>
++	<licenses>
++		<license/>
++	</licenses>
++	<developers>
++		<developer/>
++	</developers>
++	<scm>
++		<connection/>
++		<developerConnection/>
++		<tag/>
++		<url/>
++	</scm>
++	<properties>
++		<java.version>17</java.version>
++	</properties>
++	<dependencies>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-data-jpa</artifactId>
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-security-oauth2-authorization-server</artifactId>
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-validation</artifactId>
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-webmvc</artifactId>
++		</dependency>
++
++		<dependency>
++			<groupId>com.oracle.database.jdbc</groupId>
++			<artifactId>ojdbc11</artifactId>
++			<scope>runtime</scope>
++		</dependency>
++		<dependency>
++			<groupId>org.projectlombok</groupId>
++			<artifactId>lombok</artifactId>
++			<optional>true</optional>
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
++			<scope>test</scope>
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-security-oauth2-authorization-server-test</artifactId>
++			<scope>test</scope>
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-validation-test</artifactId>
++			<scope>test</scope>
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-webmvc-test</artifactId>
++			<scope>test</scope>
++		</dependency>
++	</dependencies>
++
++	<build>
++		<plugins>
++			<plugin>
++				<groupId>org.springframework.boot</groupId>
++				<artifactId>spring-boot-maven-plugin</artifactId>
++			</plugin>
++			<plugin>
++				<groupId>org.apache.maven.plugins</groupId>
++				<artifactId>maven-compiler-plugin</artifactId>
++				<executions>
++					<execution>
++						<id>default-compile</id>
++						<phase>compile</phase>
++						<goals>
++							<goal>compile</goal>
++						</goals>
++						<configuration>
++							<annotationProcessorPaths>
++								<path>
++									<groupId>org.projectlombok</groupId>
++									<artifactId>lombok</artifactId>
++								</path>
++							</annotationProcessorPaths>
++						</configuration>
++					</execution>
++					<execution>
++						<id>default-testCompile</id>
++						<phase>test-compile</phase>
++						<goals>
++							<goal>testCompile</goal>
++						</goals>
++						<configuration>
++							<annotationProcessorPaths>
++								<path>
++									<groupId>org.projectlombok</groupId>
++									<artifactId>lombok</artifactId>
++								</path>
++							</annotationProcessorPaths>
++						</configuration>
++					</execution>
++				</executions>
++			</plugin>
++		</plugins>
++	</build>
++
++</project>
+Index: auth/src/main/java/com/paola/auth/services/UsuarioService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/services/UsuarioService.java b/auth/src/main/java/com/paola/auth/services/UsuarioService.java
+new file mode 100644
+--- /dev/null	(date 1787151355632)
++++ b/auth/src/main/java/com/paola/auth/services/UsuarioService.java	(date 1787151355632)
+@@ -0,0 +1,15 @@
++package com.paola.auth.services;
++
++import java.util.Set;
++
++import com.paola.auth.dto.UsuarioRequest;
++import com.paola.auth.dto.UsuarioResponse;
++
++public interface UsuarioService {
++
++    Set<UsuarioResponse> listar();
++
++    UsuarioResponse registrar(UsuarioRequest request);
++
++    UsuarioResponse eliminar(String username);
++}
+Index: auth/src/main/java/com/paola/auth/services/AuthService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/services/AuthService.java b/auth/src/main/java/com/paola/auth/services/AuthService.java
+new file mode 100644
+--- /dev/null	(date 1787151327535)
++++ b/auth/src/main/java/com/paola/auth/services/AuthService.java	(date 1787151327535)
+@@ -0,0 +1,9 @@
++package com.paola.auth.services;
++
++import com.paola.auth.dto.LoginRequest;
++import com.paola.auth.dto.TokenResponse;
++
++public interface AuthService {
++
++    TokenResponse autenticar(LoginRequest request) throws Exception;
++}
+Index: auth/src/main/java/com/paola/auth/exception/GlobalExceptionHandler.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/exception/GlobalExceptionHandler.java b/auth/src/main/java/com/paola/auth/exception/GlobalExceptionHandler.java
+new file mode 100644
+--- /dev/null	(date 1787155506940)
++++ b/auth/src/main/java/com/paola/auth/exception/GlobalExceptionHandler.java	(date 1787155506940)
+@@ -0,0 +1,82 @@
++package com.paola.auth.exception;
++
++
++import com.paola.auth.dto.CustomErrorResponse;
++
++import jakarta.validation.ConstraintViolationException;
++import lombok.extern.slf4j.Slf4j;
++
++import org.springframework.http.HttpStatus;
++import org.springframework.http.ResponseEntity;
++import org.springframework.web.bind.MethodArgumentNotValidException;
++import org.springframework.web.bind.annotation.ExceptionHandler;
++import org.springframework.web.bind.annotation.RestControllerAdvice;
++import org.springframework.web.servlet.resource.NoResourceFoundException;
++
++import java.util.NoSuchElementException;
++
++@RestControllerAdvice
++@Slf4j
++public class GlobalExceptionHandler {
++
++    @ExceptionHandler(ConstraintViolationException.class)
++    public ResponseEntity<CustomErrorResponse> handleConstraintViolationException(ConstraintViolationException e) {
++        log.error("Violación de restricción: {}", e.getMessage());
++        return ResponseEntity.badRequest()
++                .body(new CustomErrorResponse(HttpStatus.BAD_REQUEST.value(), "Violación de restricción: " + e.getMessage()));
++    }
++
++    @ExceptionHandler(MethodArgumentNotValidException.class)
++    public ResponseEntity<CustomErrorResponse> handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
++        String mensaje = e.getBindingResult().getFieldErrors().stream()
++                .map(err -> err.getField() + ": " + err.getDefaultMessage())
++                .findFirst()
++                .orElse("Error de validación en los datos enviados");
++        log.error("Error de validación de argumentos: {}", mensaje);
++        return ResponseEntity.badRequest()
++                .body(new CustomErrorResponse(HttpStatus.BAD_REQUEST.value(), mensaje));
++    }
++
++    @ExceptionHandler(IllegalArgumentException.class)
++    public ResponseEntity<CustomErrorResponse> handleIllegalArgumentException(IllegalArgumentException e) {
++        log.error("Error en la petición: {}", e.getMessage());
++        return ResponseEntity.badRequest().body(
++                new CustomErrorResponse(HttpStatus.BAD_REQUEST.value(), e.getMessage())
++        );
++    }
++
++    @ExceptionHandler(IllegalStateException.class)
++    public ResponseEntity<CustomErrorResponse> handleIllegalStateException(IllegalStateException e) {
++        log.error("Error en el estado de la petición: {}", e.getMessage());
++        return ResponseEntity.status(HttpStatus.CONFLICT).body(
++                new CustomErrorResponse(HttpStatus.CONFLICT.value(), e.getMessage())
++        );
++    }
++
++    @ExceptionHandler(NoSuchElementException.class)
++    public ResponseEntity<CustomErrorResponse> handleNoSuchElementException(NoSuchElementException e) {
++        log.warn("No se encontró recurso: {}", e.getMessage());
++        return ResponseEntity.status(HttpStatus.NOT_FOUND)
++                .body(new CustomErrorResponse(HttpStatus.NOT_FOUND.value(), e.getMessage()));
++    }
++
++    @ExceptionHandler(NoResourceFoundException.class)
++    public ResponseEntity<CustomErrorResponse> handleNoResourceFoundException(NoResourceFoundException e) {
++        log.warn("No se encontró recurso estático: {}", e.getMessage());
++        return ResponseEntity.status(HttpStatus.NOT_FOUND)
++                .body(new CustomErrorResponse(HttpStatus.NOT_FOUND.value(), e.getMessage()));
++    }
++
++
++    //Exception debe ir al final siempre
++    @ExceptionHandler(Exception.class)
++    public ResponseEntity<CustomErrorResponse> handleGeneralException(Exception e) {
++        log.error("Error interno del servidor: {}", e.getMessage(), e);
++        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
++                .body(new CustomErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(),
++                        "Error interno del servidor. Por favor, contacte al administrador."));
++    }
++
++
++
++}
+Index: auth/.gitattributes
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/.gitattributes b/auth/.gitattributes
+new file mode 100644
+--- /dev/null	(date 1787150119047)
++++ b/auth/.gitattributes	(date 1787150119047)
+@@ -0,0 +1,2 @@
++/mvnw text eol=lf
++*.cmd text eol=crlf
+Index: auth/src/main/java/com/paola/auth/services/CustomUserDetails.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/services/CustomUserDetails.java b/auth/src/main/java/com/paola/auth/services/CustomUserDetails.java
+new file mode 100644
+--- /dev/null	(date 1787151617408)
++++ b/auth/src/main/java/com/paola/auth/services/CustomUserDetails.java	(date 1787151617408)
+@@ -0,0 +1,42 @@
++package com.paola.auth.services;
++import java.util.stream.Collectors;
++
++import org.springframework.security.core.authority.SimpleGrantedAuthority;
++import org.springframework.security.core.userdetails.User;
++import org.springframework.security.core.userdetails.UserDetails;
++import org.springframework.security.core.userdetails.UserDetailsService;
++import org.springframework.security.core.userdetails.UsernameNotFoundException;
++import org.springframework.stereotype.Service;
++
++import com.paola.auth.entities.Usuario;
++import com.paola.auth.repositories.UsuarioRepository;
++
++import lombok.AllArgsConstructor;
++import lombok.extern.slf4j.Slf4j;
++
++@Service
++@AllArgsConstructor
++@Slf4j
++
++
++public class CustomUserDetails implements UserDetailsService {
++
++    private final UsuarioRepository usuarioRepository;
++
++    @Override
++    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
++        log.info("Buscando usuario {}", username);
++
++        Usuario usuario = usuarioRepository.findByUsername(username)
++                .orElseThrow(() -> new UsernameNotFoundException("Usuario " + username + " no encontrado"));
++
++        return new User(
++                usuario.getUsername(),
++                usuario.getPassword(),
++                usuario.getRoles().stream()
++                        .map(rol -> new SimpleGrantedAuthority(rol.getNombre()))
++                        .collect(Collectors.toSet())
++        );
++    }
++}
++
+Index: auth/src/main/java/com/paola/auth/services/UserServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/services/UserServiceImpl.java b/auth/src/main/java/com/paola/auth/services/UserServiceImpl.java
+new file mode 100644
+--- /dev/null	(date 1787152276397)
++++ b/auth/src/main/java/com/paola/auth/services/UserServiceImpl.java	(date 1787152276397)
+@@ -0,0 +1,70 @@
++package com.paola.auth.services;
++import java.util.NoSuchElementException;
++import java.util.Set;
++import java.util.stream.Collectors;
++
++import org.springframework.security.crypto.password.PasswordEncoder;
++import org.springframework.stereotype.Service;
++import org.springframework.transaction.annotation.Transactional;
++
++import com.paola.auth.dto.UsuarioRequest;
++import com.paola.auth.dto.UsuarioResponse;
++import com.paola.auth.entities.Rol;
++import com.paola.auth.entities.Usuario;
++import com.paola.auth.mapper.UsuarioMapper;
++import com.paola.auth.repositories.RolRepository;
++import com.paola.auth.repositories.UsuarioRepository;
++
++import lombok.AllArgsConstructor;
++import lombok.extern.slf4j.Slf4j;
++
++@Service
++@Transactional
++@AllArgsConstructor
++@Slf4j
++
++public class UserServiceImpl implements UsuarioService{
++
++    private final UsuarioRepository usuarioRepository;
++
++    private final RolRepository rolRepository;
++
++    private final UsuarioMapper usuarioMapper;
++
++    private final PasswordEncoder passwordEncoder;
++
++    @Override
++    @Transactional(readOnly = true)
++    public Set<UsuarioResponse> listar() {
++        log.info("Listado de todos los usuarios solicitado");
++        return usuarioRepository.findAll().stream()
++                .map(usuarioMapper::entityToResponse).collect(Collectors.toSet());
++    }
++
++    @Override
++    public UsuarioResponse registrar(UsuarioRequest request) {
++        log.info("Buscando usuario {}", request.username());
++        if (usuarioRepository.findByUsername(request.username()).isPresent()) {
++            throw new IllegalArgumentException("El usuario " + request.username() + " ya está registrado");
++        }
++
++        Set<Rol> roles = request.roles().stream().map(rol ->
++                rolRepository.findByNombre(rol).orElseThrow(() ->
++                        new NoSuchElementException("Rol " + rol + " no encontrado"))
++        ).collect(Collectors.toSet());
++
++        Usuario usuario = usuarioMapper.requestToEntity(request,
++                passwordEncoder.encode(request.password()), roles);
++
++        usuario = usuarioRepository.save(usuario);
++        return usuarioMapper.entityToResponse(usuario);
++    }
++
++    @Override
++    public UsuarioResponse eliminar(String username) {
++        Usuario usuario = usuarioRepository.findByUsername(username)
++                .orElseThrow(() -> new NoSuchElementException("No se encontró el usuario: " + username));
++        usuarioRepository.delete(usuario);
++        return usuarioMapper.entityToResponse(usuario);
++    }
++}
+Index: auth/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/.gitignore b/auth/.gitignore
+new file mode 100644
+--- /dev/null	(date 1787150118950)
++++ b/auth/.gitignore	(date 1787150118950)
+@@ -0,0 +1,33 @@
++HELP.md
++target/
++.mvn/wrapper/maven-wrapper.jar
++!**/src/main/**/target/
++!**/src/test/**/target/
++
++### STS ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++
++### IntelliJ IDEA ###
++.idea
++*.iws
++*.iml
++*.ipr
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++build/
++!**/src/main/**/build/
++!**/src/test/**/build/
++
++### VS Code ###
++.vscode/
+Index: auth/src/main/java/com/paola/auth/controller/UserController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/controller/UserController.java b/auth/src/main/java/com/paola/auth/controller/UserController.java
+new file mode 100644
+--- /dev/null	(date 1787152409445)
++++ b/auth/src/main/java/com/paola/auth/controller/UserController.java	(date 1787152409445)
+@@ -0,0 +1,43 @@
++package com.paola.auth.controller;
++
++import java.util.Set;
++
++import org.springframework.http.ResponseEntity;
++import org.springframework.web.bind.annotation.DeleteMapping;
++import org.springframework.web.bind.annotation.GetMapping;
++import org.springframework.web.bind.annotation.PathVariable;
++import org.springframework.web.bind.annotation.PostMapping;
++import org.springframework.web.bind.annotation.RequestBody;
++import org.springframework.web.bind.annotation.RequestMapping;
++import org.springframework.web.bind.annotation.RestController;
++
++import com.paola.auth.dto.UsuarioRequest;
++import com.paola.auth.dto.UsuarioResponse;
++import com.paola.auth.services.UsuarioService;
++
++import jakarta.validation.Valid;
++import lombok.AllArgsConstructor;
++
++@RestController
++@RequestMapping("/admin/usuarios")
++@AllArgsConstructor
++
++public class UserController {
++
++    private final UsuarioService usuarioService;
++
++    @GetMapping
++    public ResponseEntity<Set<UsuarioResponse>> listar() {
++        return ResponseEntity.ok(usuarioService.listar());
++    }
++
++    @PostMapping
++    public ResponseEntity<UsuarioResponse> registrar(@Valid @RequestBody UsuarioRequest request) {
++        return ResponseEntity.ok(usuarioService.registrar(request));
++    }
++
++    @DeleteMapping("/{username}")
++    public ResponseEntity<UsuarioResponse> eliminar(@PathVariable String username) {
++        return ResponseEntity.ok(usuarioService.eliminar(username));
++    }
++}
+Index: auth/src/main/java/com/paola/auth/controller/AuthController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/controller/AuthController.java b/auth/src/main/java/com/paola/auth/controller/AuthController.java
+new file mode 100644
+--- /dev/null	(date 1787152363929)
++++ b/auth/src/main/java/com/paola/auth/controller/AuthController.java	(date 1787152363929)
+@@ -0,0 +1,29 @@
++package com.paola.auth.controller;
++import org.springframework.http.ResponseEntity;
++import org.springframework.validation.annotation.Validated;
++import org.springframework.web.bind.annotation.PostMapping;
++import org.springframework.web.bind.annotation.RequestBody;
++import org.springframework.web.bind.annotation.RequestMapping;
++import org.springframework.web.bind.annotation.RestController;
++
++import com.paola.auth.dto.LoginRequest;
++import com.paola.auth.dto.TokenResponse;
++import com.paola.auth.services.AuthService;
++
++import jakarta.validation.Valid;
++import lombok.AllArgsConstructor;
++
++@RestController
++@RequestMapping("/api")
++@AllArgsConstructor
++@Validated
++
++public class AuthController {
++
++    private final AuthService authService;
++
++    @PostMapping("/login")
++    public ResponseEntity<TokenResponse> login(@Valid @RequestBody LoginRequest request) throws Exception {
++        return ResponseEntity.ok(authService.autenticar(request));
++    }
++}
+Index: auth/src/main/java/com/paola/auth/AuthApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/AuthApplication.java b/auth/src/main/java/com/paola/auth/AuthApplication.java
+new file mode 100644
+--- /dev/null	(date 1787150119284)
++++ b/auth/src/main/java/com/paola/auth/AuthApplication.java	(date 1787150119284)
+@@ -0,0 +1,13 @@
++package com.paola.auth;
++
++import org.springframework.boot.SpringApplication;
++import org.springframework.boot.autoconfigure.SpringBootApplication;
++
++@SpringBootApplication
++public class AuthApplication {
++
++	public static void main(String[] args) {
++		SpringApplication.run(AuthApplication.class, args);
++	}
++
++}
+Index: auth/src/main/java/com/paola/auth/repositories/UsuarioRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/repositories/UsuarioRepository.java b/auth/src/main/java/com/paola/auth/repositories/UsuarioRepository.java
+new file mode 100644
+--- /dev/null	(date 1787151617415)
++++ b/auth/src/main/java/com/paola/auth/repositories/UsuarioRepository.java	(date 1787151617415)
+@@ -0,0 +1,16 @@
++package com.paola.auth.repositories;
++
++import org.springframework.data.jpa.repository.JpaRepository;
++
++import com.paola.auth.entities.Usuario;
++import java.util.Optional;
++
++public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
++
++
++    Optional<Usuario> findByUsername(String username);
++
++    boolean existsByUsername(String username);
++
++    void deleteByUsername(String username);
++}
+Index: auth/src/main/java/com/paola/auth/repositories/RolRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth/src/main/java/com/paola/auth/repositories/RolRepository.java b/auth/src/main/java/com/paola/auth/repositories/RolRepository.java
+new file mode 100644
+--- /dev/null	(date 1787151617399)
++++ b/auth/src/main/java/com/paola/auth/repositories/RolRepository.java	(date 1787151617399)
+@@ -0,0 +1,14 @@
++package com.paola.auth.repositories;
++
++import org.springframework.data.jpa.repository.JpaRepository;
++import org.springframework.stereotype.Repository;
++import com.paola.auth.entities.Rol;
++import java.util.Optional;
++
++@Repository
++public interface RolRepository extends JpaRepository<Rol, Long>{
++
++    boolean existsByNombre(String nombre);
++
++    Optional<Rol> findByNombre(String nombre);
++}
+Index: auth/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/auth/src/main/resources/application.properties b/auth/src/main/resources/application.properties
+new file mode 100644
+--- /dev/null	(date 1787157635426)
++++ b/auth/src/main/resources/application.properties	(date 1787157635426)
+@@ -0,0 +1,10 @@
++spring.application.name=auth
++
++server.port=${PORT}
++
++spring.datasource.url=${DB_URL}
++spring.datasource.username=${DB_USER}
++spring.datasource.password=${DB_PASS}
++spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
++
++spring.jpa.hibernate.ddl-auto=create-drop
+\ No newline at end of file

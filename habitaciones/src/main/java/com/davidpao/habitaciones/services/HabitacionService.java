@@ -7,4 +7,5 @@ import com.davidpao.commons.service.CrudService;
 
 public interface HabitacionService extends CrudService<HabitacionRequest, HabitacionResponse> {
     HabitacionResponse obtenerHabitacionPorIdSinEstado(Long id);
+    void actualizarEstadoHabitacion(Long idHabitacion,Long idEstadoHabitacion);
 }
