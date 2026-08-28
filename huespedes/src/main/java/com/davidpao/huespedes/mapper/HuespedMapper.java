@@ -33,12 +33,15 @@ public class HuespedMapper
 
         if (entidad == null) return null;
 
+        String nombreCompleto = String.join(" ",
+                entidad.getNombre(),
+                entidad.getApellidoPaterno(),
+                entidad.getApellidoMaterno()
+        );
+
         return new HuespedResponse(
                 entidad.getId(),
-                String.join(" ",
-                        entidad.getNombre(),
-                        entidad.getApellidoPaterno(),
-                        entidad.getApellidoMaterno()),
+                nombreCompleto,
                 entidad.getEmail(),
                 entidad.getTelefono(),
                 entidad.getDocumento(),
