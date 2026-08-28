@@ -14,4 +14,6 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Long> {
     Optional<Habitacion> findByIdAndEstadoRegistro(Long id, EstadoRegistro estadoRegistro);
 
     boolean existsByNumeroHabitacionAndEstadoRegistro(Integer numeroHabitacion, EstadoRegistro estadoRegistro);
+
+    Optional<Habitacion> findByNumeroHabitacionAndEstadoRegistro(Integer numeroHabitacion, EstadoRegistro estadoRegistro);
 }

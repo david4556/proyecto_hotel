@@ -19,6 +19,7 @@ public class HabitacionMapper implements CommonMapper<HabitacionRequest, Habitac
         return Habitacion.builder()
                 .numeroHabitacion(request.numeroHabitacion())
                 .tipoHabitacion(TipoHabitacion.obtenerTipoHabitacionPorCodigo(request.idTipoHabitacion()))
+                .precio(request.precio())
                 .capacidad(request.capacidad())
                 .estadoHabitacion(EstadoHabitacion.DISPONIBLE)
                 .estadoRegistro(EstadoRegistro.ACTIVO)
